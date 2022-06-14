@@ -21,6 +21,7 @@ jobs:
     - name: Run Synopsys Detect
       uses: synopsys-sig/detect-action@v0.3.2
       with:
+          github-token: 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
           detect-version: 7.13.2
           blackduck-url: https://saastest.app.blackduck.com
           blackduck-api-token: Y2E4NWQ0NTMtZmVkZi00NzcyLThlZWQtM2U3YzVjMWYzZDVhOjViYTMxNmYzLWI1ZmQtNDkzMi1iNjIwLWM2YjJmOTdlMTc2Zg==
