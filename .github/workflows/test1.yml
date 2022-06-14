@@ -19,7 +19,7 @@ jobs:
         policy-name: 'test_actions'
         no-fail-if-policy-exists: true
     - name: Run Synopsys Detect
-      uses: synopsys-sig/detect-action@v2.0.0
+      uses: synopsys-sig/detect-action@v0.3.2
       env:
         SPRING_APPLICATION_JSON: '{"detect.detector.search.depth":"10"}'
       with:
