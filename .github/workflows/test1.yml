@@ -22,6 +22,6 @@ jobs:
       uses: synopsys-sig/detect-action@v0.3.2
       with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          detect-version: 7.13.2
+          detect-version: 7.13.1
           blackduck-url: https://saastest.app.blackduck.com
           blackduck-api-token: Y2E4NWQ0NTMtZmVkZi00NzcyLThlZWQtM2U3YzVjMWYzZDVhOjViYTMxNmYzLWI1ZmQtNDkzMi1iNjIwLWM2YjJmOTdlMTc2Zg==
