@@ -2,28 +2,20 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
   security:
-    runs-on: ubuntu-latest
+    runs-on: Linux
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Java 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-    
-    - name: Create Black Duck Policy
-      uses: blackducksoftware/create-policy-action@v0.0.1
-      with:
-        blackduck-url: https://saastest.app.blackduck.com
-        blackduck-api-token: Y2E4NWQ0NTMtZmVkZi00NzcyLThlZWQtM2U3YzVjMWYzZDVhOjViYTMxNmYzLWI1ZmQtNDkzMi1iNjIwLWM2YjJmOTdlMTc2Zg==
-        policy-name: 'test_actions'
-        no-fail-if-policy-exists: true
-    - name: Run Synopsys Detect
-      uses: synopsys-sig/detect-action@v0.3.2
+    - uses: actions/checkout@v3
+    - name: Run Synopsys Deect
+      uses: synopsys-sig/detect-action@v0.3.4
       env:
-        SPRING_APPLICATION_JSON: '{"detect.detector.search.depth":"10"}'
+        http_proxy: "http://cias.geoaws.com:8080"
+        ftp_proxy: "http://cias.geoaws.com:8080"
+        no_proxy: "localhost,127.0.0.1,169.254.169.254,conti.de,contiwan.com,s3.eu-central-1.amazona2s.com,s3-eu-central-1-amazonaws.com,s3.amazonaws.com"
+        DETECT_PHONE_HOME_PASSTHROUGH: false
+        DETECT_DIAGNOSTIC: true
+        NODE_TLS_REJECT_UNAUTHORIZED: false
       with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          detect-version: 7.13.2
+          detect-version: 8.10.0
           blackduck-url: https://saastest.app.blackduck.com
           blackduck-api-token: Y2E4NWQ0NTMtZmVkZi00NzcyLThlZWQtM2U3YzVjMWYzZDVhOjViYTMxNmYzLWI1ZmQtNDkzMi1iNjIwLWM2YjJmOTdlMTc2Zg==
