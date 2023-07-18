@@ -10,9 +10,6 @@ jobs:
       env:
         http_proxy: "http://cias.geoaws.com:8080"
         ftp_proxy: "http://cias.geoaws.com:8080"
-        DETECT_PHONE_HOME_PASSTHROUGH: false
-        DETECT_DIAGNOSTIC: true
-        NODE_TLS_REJECT_UNAUTHORIZED: false
       with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           detect-version: 8.10.0
