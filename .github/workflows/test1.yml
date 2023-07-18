@@ -10,6 +10,8 @@ jobs:
       env:
         http_proxy: "http://cias.geoaws.com:8080"
         ftp_proxy: "http://cias.geoaws.com:8080"
+        no_proxy: "localhost,127.0.0.1,169.254.169.254,conti.de,contiwan.com,s3.eu-central-1.amazona2s.com,s3-eu-central-1-amazonaws.com,s3.amazonaws.com"
+
       with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           detect-version: 8.10.0
