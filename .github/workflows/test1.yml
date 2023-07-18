@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
   security:
-    runs-on: Linux
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Run Synopsys Deect
