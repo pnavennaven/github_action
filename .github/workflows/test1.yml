@@ -12,7 +12,6 @@ jobs:
         ftp_proxy: "http://cias.geoaws.com:8080"
         no_proxy: "localhost,127.0.0.1,169.254.169.254,conti.de,contiwan.com,s3.eu-central-1.amazona2s.com,s3-eu-central-1-amazonaws.com,s3.amazonaws.com"
         NODE_TLS_REJECT_UNAUTHORIZED: false
-        DETECT_DIAGNOSTIC: true
         SPRING_APPLICATION_JSON: '{"detect.phone.home.passthrough":"false"}'
       with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
