@@ -8,9 +8,6 @@ jobs:
     - name: Run Synopsys Deect
       uses: synopsys-sig/detect-action@v0.3.4
       env:
-        http_proxy: "http://cias.geoaws.com:8080"
-        ftp_proxy: "http://cias.geoaws.com:8080"
-        no_proxy: "localhost,127.0.0.1,169.254.169.254,conti.de,contiwan.com,s3.eu-central-1.amazona2s.com,s3-eu-central-1-amazonaws.com,s3.amazonaws.com"
         NODE_TLS_REJECT_UNAUTHORIZED: false
         DETECT_DIAGNOSTIC: true
         SPRING_APPLICATION_JSON: '{"detect.project.name":"FALSE"}'
@@ -18,4 +15,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           detect-version: 8.10.0
           blackduck-url: https://saastest.app.blackduck.com
-          blackduck-api-token: Y2E4NWQ0NTMtZmVkZi00NzcyLThlZWQtM2U3YzVjMWYzZDVhOjViYTMxNmYzLWI1ZmQtNDkzMi1iNjIwLWM2YjJmOTdlMTc2Zg==
+          blackduck-api-token: Y2E4NWQ0NTMtZmVkZi00NzcyLThlZWQtM2U3YzVjMWYzZDVhOjg4Njg4YjJhLTcwNDgtNGVkNS1hMjIxLWQwNWU4NzQ5YWRmYQ==
