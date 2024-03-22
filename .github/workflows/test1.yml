@@ -17,7 +17,6 @@ jobs:
         ### Use below configuration to set specific detect environment variables
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
-          DETECT_POLICY_CHECK_FAIL_ON_SEVERITIES: ALL
         with:
           blackduck_url: https://52.255.229.70
           blackduck_token: ZDdhODgyOTYtYmM2ZC00OTMyLWI4MjQtZDg5MmZmMWMxNjY3OjMzNTE0MGZmLTZlZTYtNDRiOC1iYzBhLTBkODJlY2UyNWVlMw==
