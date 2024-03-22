@@ -1,18 +1,37 @@
-name: GitHub Actions Demo
-on: [push]
+name: CI-BlackDuck-Basic
+on:
+  push:
+    branches: [ main, master, develop, stage, release ]
+  pull_request:
+    branches: [ main, master, develop, stage, release ]
+  workflow_dispatch:
+    
 jobs:
-  security:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: [ ubuntu-latest ]
     steps:
-    - uses: actions/checkout@v3
-    - name: Run Synopsys Deect
-      uses: synopsys-sig/detect-action@v0.3.4
-      env:
-        NODE_TLS_REJECT_UNAUTHORIZED: false
-        DETECT_DIAGNOSTIC: true
-        SPRING_APPLICATION_JSON: '{"detect.project.name":"FALSE"}'
-      with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          detect-version: 8.10.0
-          blackduck-url: https://saastest.app.blackduck.com
-          blackduck-api-token: Y2E4NWQ0NTMtZmVkZi00NzcyLThlZWQtM2U3YzVjMWYzZDVhOjg4Njg4YjJhLTcwNDgtNGVkNS1hMjIxLWQwNWU4NzQ5YWRmYQ==
+      - name: Checkout Source
+        uses: actions/checkout@v3
+      - name: Black Duck Scan
+        uses: synopsys-sig/synopsys-action@v1.8.0
+        
+        ### Configure DETECT environment variables
+        env:
+          DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
+          
+        with:
+          ### SCANNING: Required fields
+          blackduck_url: ${{ secrets.BLACKDUCK_URL }}
+          blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
+         
+          ### SCANNING: Optional fields
+          # blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
+          
+          ### FIX PULL REQUEST CREATION: Uncomment below to enable
+          # blackduck_fixpr_enabled: true
+          # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when Fix PRs is enabled
+          
+          ### PULL REQUEST COMMENTS: Uncomment below to enable
+          # blackduck_prcomment_enabled: true 
+          # github_token: ${{ secrets.GITHUB_TOKEN }} # Required when PR comments is enabled
+
