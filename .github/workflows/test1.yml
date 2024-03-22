@@ -21,8 +21,8 @@ jobs:
           
         with:
           ### SCANNING: Required fields
-          blackduck_url: ${{ secrets.BLACKDUCK_URL }}
-          blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
+          blackduck_url: https://52.255.229.70
+          blackduck_token: ZDdhODgyOTYtYmM2ZC00OTMyLWI4MjQtZDg5MmZmMWMxNjY3OjMzNTE0MGZmLTZlZTYtNDRiOC1iYzBhLTBkODJlY2UyNWVlMw==
          
           ### SCANNING: Optional fields
           # blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
