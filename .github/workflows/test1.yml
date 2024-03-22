@@ -19,12 +19,12 @@ jobs:
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
           DETECT_BLACKDUCK_RAPID_COMPARE_MODE: ALL
-          DETECT_POLICY_CHECK_FAIL_ON_SEVERITIES: ALL
+          DETECT_POLICY_CHECK_FAIL_ON_SEVERITIES: BLOCKER
           
         with:
           ### SCANNING: Required fields
           blackduck_url: https://52.300.300.300
-          blackduck_token: ZDdhODgyOTYtYmM2ZC00OTMyLWI4MjQtZDg5MmZmMWMxNjY3OjMzNTE0MGZmLTZlZTYtNDRiOC1iYzBhLTBkODJlY2UyNWVlMw==
+          blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
           blackduck_scan_full: true
          
           ### SCANNING: Optional fields
