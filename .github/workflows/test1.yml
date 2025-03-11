@@ -28,7 +28,6 @@ jobs:
           blackducksca_fixpr_filter_severities: ALL
           github_token: ${{ secrets.GITHUB_TOKEN }}
           blackducksca_scan_full: true
-          blackducksca_scan_failure_severities: ALL
          
           ### SCANNING: Optional fields
           # blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
