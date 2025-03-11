@@ -20,7 +20,7 @@ jobs:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
           BRIDGE_BLACKDUCKSCA_FIXPR_ENABLED: true
           BLACKDUCK_TRUST_CERT: true
-          BLACKDUCKSCA_FIXPR_FILTER_SEVERITIES: "CRITICAL,  HIGH"
+          BLACKDUCKSCA_FIXPR_FILTER_SEVERITIES: "CRITICAL"
           
         with:
           ### SCANNING: Required fields
