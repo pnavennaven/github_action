@@ -23,8 +23,8 @@ jobs:
           
         with:
           ### SCANNING: Required fields
-          blackduck_url: https://4.157.105.116
-          blackduck_token: ${{ secrets.BLACKDUCK_TOKEN }}
+          blackducksca_url: https://4.157.105.116
+          blackducksca_token: ${{ secrets.BLACKDUCK_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           blackducksca_scan_full: true
           blackducksca_scan_failure_severities: ALL
