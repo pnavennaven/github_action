@@ -29,6 +29,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           blackducksca_scan_full: true
           blackducksca.automation.prComment: true
+          blackduck_fixpr_enabled: true
          
           ### SCANNING: Optional fields
           # blackduck_scan_failure_severities: 'CRITICAL'
