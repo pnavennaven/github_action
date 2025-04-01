@@ -22,7 +22,7 @@ jobs:
           
         with:
           ### SCANNING: Required fields
-          blackducksca_url: https://4.157.105.116
+          blackducksca_url: https://172.212.45.166
           blackducksca_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
           blackducksca_fixpr_enabled: true
           blackducksca_fixpr_filter_severities: CRITICAL
