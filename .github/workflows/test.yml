@@ -27,6 +27,7 @@ jobs:
         ### Use below configuration to set specific detect environment variables
         env:
           DETECT_PROJECT_NAME: "GenAI"
+          BLACKDUCK_TRUST_CERT: true
           # DETECT_PROJECT_NAME: "${{ github.event.repository.name2 }}"
           # DETECT_PROJECT_VERSION_NAME: ${{ inputs.tags }}
           DETECT_PROJECT_VERSION_NAME: "centralservices_1.1.1"
@@ -49,6 +50,7 @@ jobs:
         ### Use below configuration to set specific detect environment variables
         env:
           DETECT_PROJECT_NAME: "GenAI"
+          BLACKDUCK_TRUST_CERT: true
         with:
           blackducksca_url: ${{ vars.BLACKDUCK_SERVER_URL  }}
           blackducksca_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
