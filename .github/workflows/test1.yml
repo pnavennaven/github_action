@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v3
       - name: Black Duck Scan
-        uses: blackduck-inc/black-duck-security-scan@v2.0.0
+        uses: blackduck-inc/black-duck-security-scan@6ee400ee2502a366bdff13cddae76bbde804fd20
         
         ### Configure DETECT environment variables
         env:
@@ -27,7 +27,7 @@ jobs:
           blackducksca_fixpr_enabled: true
           blackducksca_fixpr_filter_severities: CRITICAL
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          blackducksca_scan_full: true
+          blackducksca_scan_full: false
           blackducksca.automation.prComment: true
          
           ### SCANNING: Optional fields
