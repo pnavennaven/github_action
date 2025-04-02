@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Echo a message
         run: |
-          echo "This message is from the echo job"
+          echo ${{ github.event_name }}
   blackduck_scan:
     runs-on: [ubuntu-latest]
 
