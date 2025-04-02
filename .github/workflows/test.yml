@@ -68,6 +68,6 @@ jobs:
 
           ### Arbitrary product-related CL arguments
           detect_search_depth: 10
-          detect_args: '--detect.diagnostic=true --detect.detector.search.depth=10'
+          detect_args: '--detect.diagnostic=true'
           
 
