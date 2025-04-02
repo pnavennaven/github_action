@@ -28,6 +28,7 @@ jobs:
           blackducksca_fixpr_filter_severities: CRITICAL
           github_token: ${{ secrets.GITHUB_TOKEN }}
           blackducksca_scan_full: false
+          detect_args: '--detect.detector.search.depth=10'
           # blackducksca.automation.prComment: true
          
           ### SCANNING: Optional fields
