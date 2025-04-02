@@ -57,6 +57,7 @@ jobs:
         env:
           DETECT_PROJECT_NAME: "GenAI"
           BLACKDUCK_TRUST_CERT: true
+          DETECT_PROJECT_VERSION_NAME: "centralservices_1.1.1"
         with:
           blackducksca_url: ${{ vars.BLACKDUCK_SERVER_URL  }}
           blackducksca_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
