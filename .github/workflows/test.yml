@@ -23,7 +23,7 @@ jobs:
       - name: Black Duck SCA PR Scan
         id: black-duck-pr-scan
         if: ${{ github.event_name == 'pull_request' }}
-        uses: blackduck-inc/black-duck-security-scan@6ee400ee2502a366bdff13cddae76bbde804fd20 #v2.1.1
+        uses: blackduck-inc/black-duck-security-scan@v2.1.1 #v2.1.1
 
         ### Use below configuration to set specific detect environment variables
         env:
