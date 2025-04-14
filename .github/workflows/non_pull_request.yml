@@ -40,7 +40,9 @@ jobs:
           blackducksca_fixpr_enabled: true
           blackducksca_fixpr_filter_severities: CRITICAL
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          blackducksca_reports_sarif_create: true
+          blackducksca_upload_sarif_report: true
 
           ### Arbitrary product-related CL arguments
           detect_search_depth: 10
-          detect_args: '--detect.diagnostic=true --detect.blackduck.signature.scanner.arguments="--min-scan-interval=0"'
+          detect_args: '--detect.diagnostic=true --logging.level.detect=TRACE --detect.blackduck.signature.scanner.arguments="--min-scan-interval=0"'
