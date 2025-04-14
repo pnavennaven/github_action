@@ -1,4 +1,8 @@
 name: CI-BlackDuck-SCA
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
 
 on:
   push:
