@@ -37,6 +37,7 @@ jobs:
 
           ### Below configuration is used to enable automatic pull request comment based on Black Duck SCA scan result
           blackducksca_fixpr_enabled: true
+          blackducksca.fixpr.enabled: true
           bridge_blackducksca_fixpr_enabled: true
           blackduck_fixpr_enabled: true
           blackducksca_fixpr_filter_severities: "CRITICAL"
