@@ -8,12 +8,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  echo_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Echo a message
-        run: |
-          echo ${{ github.event_name }}
   blackduck_scan:
     runs-on: [ubuntu-latest]
 
@@ -43,6 +37,8 @@ jobs:
 
           ### Below configuration is used to enable automatic pull request comment based on Black Duck SCA scan result
           blackducksca_fixpr_enabled: true
+          bridge_blackducksca_fixpr_enabled: true
+          blackduck_fixpr_enabled: true
           blackducksca_fixpr_filter_severities: "CRITICAL"
           blackducksca_prComment_enabled: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
