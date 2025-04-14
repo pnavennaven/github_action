@@ -2,9 +2,9 @@ name: CI-BlackDuck-SCA
 
 on:
   push:
-    branches: [ main, master, develop, stage, release ]
+    branches: [ main, master, develop, stage, release, add-empty-file ]
   pull_request:
-    branches: [ main, master, develop, stage, release ]
+    branches: [ main, master, develop, stage, release, add-empty-file ]
   workflow_dispatch:
 
 jobs:
