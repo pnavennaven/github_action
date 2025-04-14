@@ -47,4 +47,4 @@ jobs:
 
           ### Arbitrary product-related CL arguments
           detect_search_depth: 10
-          detect_args: '--detect.diagnostic=true --detect.blackduck.rapid.compare.mode=NONE'
+          detect_args: '--detect.diagnostic=true --detect.blackduck.rapid.compare.mode=ALL'
