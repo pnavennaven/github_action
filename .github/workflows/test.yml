@@ -25,28 +25,6 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v3
 
-      - name: Black Duck SCA Full Scan
-        id: black-duck-full-scan
-        
-        uses: blackduck-inc/black-duck-security-scan@6ee400ee2502a366bdff13cddae76bbde804fd20 #v2.1.1
-
-        ### Use below configuration to set specific detect environment variables
-        env:
-          DETECT_PROJECT_NAME: "GenAI"
-          BLACKDUCK_TRUST_CERT: true
-          # DETECT_PROJECT_NAME: "${{ github.event.repository.name2 }}"
-          # DETECT_PROJECT_VERSION_NAME: ${{ inputs.tags }}
-          DETECT_PROJECT_VERSION_NAME: "centralservices_1.1.1"
-        with:
-          blackducksca_url: ${{ vars.BLACKDUCK_SERVER_URL }}
-          blackducksca_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
-          blackducksca_scan_full: true
-
-          ### Accepts Multiple Values
-          blackducksca_scan_failure_severities: "BLOCKER,CRITICAL"
-
-          ### Arbitrary product-related CL arguments
-          detect_search_depth: 10
 
       - name: Black Duck SCA PR Scan
         id: black-duck-pr-scan
