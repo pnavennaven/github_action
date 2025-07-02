@@ -50,7 +50,7 @@ jobs:
 
           ### Arbitrary product-related CL arguments
           detect_search_depth: 10
-          detect_args: '--logging.level.detect=TRACE --detect.blackduck.signature.scanner.arguments="--min-scan-interval=0"'
+          detect_args: '--detect.container.scan.file.path=squid.tar --logging.level.detect=TRACE --detect.blackduck.signature.scanner.arguments="--min-scan-interval=0"'
 
       - name: Black Duck SCA PR Scan
         id: black-duck-pr-scan
