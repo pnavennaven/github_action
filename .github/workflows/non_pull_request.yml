@@ -33,7 +33,7 @@ jobs:
 
         ### Use below configuration to set specific detect environment variables
         env:
-          DETECT_PROJECT_NAME: "Gon"
+          DETECT_PROJECT_NAME: "Gan"
           DETECT_PROJECT_VERSION_NAME: "test1"
           BLACKDUCK_TRUST_CERT: true
         with:
